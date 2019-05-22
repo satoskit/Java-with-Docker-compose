@@ -1,0 +1,23 @@
+version: '3'
+services:
+  # mysql:
+  postgres:
+    # image: mysql
+    image: postgres
+    ports:
+    - "5432:5432"
+  webapp:
+    build: .
+    ports:
+    - "8080:8080"
+  nginx:
+    build: './nginxDocker'
+#      dockerfile: dockerfile-nginx
+    # image: nginx:latest
+    container_name: nginx-container # behöver ändras i Vagrant!
+    # volumes:
+    #   - ./nginx.conf:/etc/nginx/nginx.conf
+    ports: # höger till container, vänster till debian
+    - "8081:80" # 80 är default
+    - "443:443"
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <module name="org.mysql" xmlns="urn:jboss:module:1.1"> -->
+<module name="org.postgresql" xmlns="urn:jboss:module:1.1">
+  <resources>
+    <!-- <resource-root path="mysql-connector-java-8.0.15.jar" /> -->
+    <resource-root path="postgresql-42.2.5.jar" />
+  </resources>
+  <dependencies>
+    <module name="javax.api" />
+    <module name="javax.transaction.api" />
+  </dependencies>
+</module>
+
